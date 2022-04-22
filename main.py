@@ -20,14 +20,14 @@ def render_lessons_page():
     return render_template("game_1.html")
 
 
-@app.route("/register", methods=['post', 'get'])
+@app.route("/lessons/2")
+def render_second_game():
+    return render_template("game_2.html")
+
+
+@app.route("/register")
 def render_register():
-    if request.method == 'POST':
-	    name = request.form.get("name")
-    print(name)
-	    #surname = request.form.get('name-1')
-        #email = request.form.get('email')
-        #print(name, surname, email)
+    return render_template("registration.html")
 
 
 @app.route("/login")
